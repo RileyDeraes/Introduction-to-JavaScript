@@ -119,6 +119,10 @@ console.log("Rounded up, that is about " + Math.round(foodInPounds * 100 + Numbe
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+/************************************************************** Stretch **************************************************************/
+//Take Rock, Paper, Scissors further
+//update your rock papers scissors code below to take a prompt from a user using the window object
+
 var rock = "rock";
 var paper = "paper";
 var scissors = "scissors";
@@ -168,13 +172,21 @@ console.log(game(yourChoice));
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+var kilometers = prompt("How many KM?");
+var miles = kilometers * 0.621371;
 
+console.log("That would be " + miles + " miles.");
+console.log("Or about " + Math.round(miles * 100 + Number.EPSILON ) / 100+ " miles after rounding up.")
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
+var feet = prompt("How many feet?");
+var cm = feet * 30.48;
 
+console.log(feet + " feet would be " + cm + " cm.");
+console.log("Or about " + Math.round(cm * 100 + Number.EPSILON ) / 100+ " cm after rounding up.")
 
 
 
@@ -183,7 +195,18 @@ console.log(game(yourChoice));
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
+const numbers = prompt("How many bottles?");
+console.log("You've got " + numbers + " bottles of soda on the wall.");
+console.log(numbers + " bottles of soda.");
 
+annoyingSong(numbers);
+function annoyingSong(numbers){
+    for(numbers >= 0; numbers--;){
+       console.log("Take one down, pass it around, you've got " + numbers +  " bottles of soda on the wall.");
+      console.log(numbers + " bottles of soda on the wall.");
+      console.log(numbers + " bottles of soda.");
+    }
+}
 
 
 
@@ -196,22 +219,33 @@ console.log(game(yourChoice));
 //60s should be D 
 //and anything below 60 should be F
   
+const number = prompt("What's your grade?");
+console.log("Your grade is " + number + ".")
 
+function grades(number){
+    if(number > 89){
+        return("A");
+    } else if(number > 79){
+        return("B");
+    } else if(number > 69){
+        return("C");
+    } else if(number > 59){
+        return("D");
+    } else {
+        return("F");
+    }
+} 
+console.log("You scored: " + grades(number));
   
   
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
-// Hint - you may need to study tomorrow's traniing kit on arrays 
+// Hint - you may need to study tomorrow's training kit on arrays 
 // try looking up the .includes() method
 
 
 
-
-
-/************************************************************** Stretch **************************************************************/
-//Take Rock, Paper, Scissors further
-//update your rock papers scissors code below to take a prompt from a user using the window object
 
 
 
