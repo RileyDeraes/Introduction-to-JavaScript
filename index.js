@@ -60,6 +60,7 @@ const dogYears = function(age, dogAge) {
 
 
 console.log( "I am " + dogYears(age, dogAge) + " years old in dog years." );
+console.log(`I am ${dogYears(age, dogAge)} yeras old in dog years.`);
 
 
 
